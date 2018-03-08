@@ -37,6 +37,7 @@ if __name__ == '__main__':
             try:
                 text_carrier = json.loads(data)
                 if text_carrier:
+                    print("Creat text carrier")
                     # extract the text_carrier recive from client
                     span_context = opentracing.tracer.extract(opentracing.Format.TEXT_MAP, text_carrier)
                     # create child span of root span name server_span
